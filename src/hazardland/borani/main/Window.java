@@ -14,5 +14,9 @@ public class Window extends Entity
 		this.scene = (Main) scene;
 		touch = true;
 		hide ();
+		shape.x = -position.x();
+		shape.y = -position.y();
+		shape.width = scene.screen.width;
+		shape.height = scene.screen.height;
 	}
 }

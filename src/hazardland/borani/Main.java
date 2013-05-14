@@ -45,6 +45,7 @@ public class Main extends Scene
 	public Shape left = new Shape(0, 0, 250, 350);
 	public Shape right = new Shape(827, 0, 200, 400);
 	public Shape loader;
+	public Shape logo;
 	public Win win;
 	public Lose lose;
 	public static Random random = new Random();
@@ -69,13 +70,17 @@ public class Main extends Scene
 	public void open (GL10 gl)
 	{
 		decode (R.drawable.loader);
+		decode (R.drawable.logo);
 		loader = new Shape(screen.width/2-56/2, screen.height/2-61/2, 56, 61);
+		logo = new Shape(screen.width/2-406/2, screen.height/2-83/2+70, 406, 83);
 	}
 	
 	public void load (GL10 gl)
 	{
 		loader.draw (gl, scale, image(R.drawable.loader));
 		loader.corner -= 2;
+		logo.draw(gl, scale, image(R.drawable.logo));
+		
 	}
 	
 	public void load ()

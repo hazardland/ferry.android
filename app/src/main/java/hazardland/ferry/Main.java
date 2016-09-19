@@ -75,7 +75,7 @@ public class Main extends Scene
 		logo = new Shape(screen.width/2-406/2, screen.height/2-83/2+70, 406, 83);
 	}
 	
-	public void load (GL10 gl)
+	public void loading (GL10 gl)
 	{
 		loader.draw (gl, scale, image(R.drawable.loader));
 		loader.corner -= 2;
@@ -83,7 +83,7 @@ public class Main extends Scene
 		
 	}
 	
-	public void load ()
+	public void loader ()
 	{
 		music (R.raw.ckali);
 		music (R.raw.chitebi);
